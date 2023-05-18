@@ -7,7 +7,7 @@ app.config['SECRET_KEY'] = 'secret!'
 CORS(app)
 socketio = SocketIO(app,cors_allowed_origins="*")
 
-@app.route("/http-call")
+@app.route("/api/http-call")
 def http_call():
     """return JSON with string data as the value"""
     data = {'data':'This text was fetched using an HTTP call to server on render'}

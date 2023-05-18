@@ -19,8 +19,8 @@ function App() {
 
   useEffect(() => {
     if (buttonStatus === true) {
-      const socket = io("localhost:5001/", {
-        transports: ["websocket"],
+      const socket = io({
+        protocols: ["http"],
         cors: {
           origin: "http://localhost:3000/",
         },
